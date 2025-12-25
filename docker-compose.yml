@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - ./api:/app
+    command: ["npm", "start"]
+    ports:
+      - "3000:3000"
+
+  frontend:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: ["npm", "start"]
+    ports:
+      - "5173:5173"
+
+  worker:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - ./worker:/app
+    command: ["npm", "start"]
+
