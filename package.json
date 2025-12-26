@@ -1,0 +1,13 @@
+{
+  "name": "mini-uptime-robot",
+  "version": "1.0.0",
+  "description": "Simple Node project serving a Hello World frontend page.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
+
