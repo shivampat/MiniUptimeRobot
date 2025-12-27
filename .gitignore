@@ -31,3 +31,4 @@ api/.venv/
 
 # worker pycache
 worker/__pycache__/
+worker/worker-venv/
