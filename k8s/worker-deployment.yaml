@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miniuptimerobot-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: miniuptimerobot-worker
+  template:
+    metadata:
+      labels:
+        app: miniuptimerobot-worker
+    spec:
+      containers:
+        - name: worker
+          image: miniuptimerobot-worker:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: API_BASE
+              value: "http://miniuptimerobot-api:8000"

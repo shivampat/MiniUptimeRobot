@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miniuptimerobot-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: miniuptimerobot-api
+  template:
+    metadata:
+      labels:
+        app: miniuptimerobot-api
+    spec:
+      containers:
+        - name: api
+          image: miniuptimerobot-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
