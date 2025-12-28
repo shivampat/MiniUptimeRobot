@@ -1,7 +1,7 @@
 {
   "name": "mini-uptime-robot",
   "version": "1.0.0",
-  "description": "Simple Node project serving a Hello World frontend page.",
+  "description": "Monitor URLs to check if they are up and running.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
