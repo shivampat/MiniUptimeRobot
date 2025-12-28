@@ -1,7 +1,7 @@
 import time
 import requests
 
-API_BASE = "http://localhost:8000"
+API_BASE = "http://api:8000"
 POLL_SLEEP_SECONDS = 2
 HTTP_TIMEOUT_SECONDS = 10
 

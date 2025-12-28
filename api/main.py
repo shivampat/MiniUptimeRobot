@@ -84,11 +84,6 @@ def get_watch(watch_id: int):
         raise HTTPException(status_code=404, detail="Watch not found")
     return dict(row)
 
-@app.get("/watches/{watch_id}")
-def get_watch(watch_id: int):
-    db = get_db()
-    row = db.execute("SELECT * FROM watches WHERE id = ?", (watch_id,)).fetchone()
-    return dict(row)
 
 @app.post("/results")
 def update_watch_result(result: WatchResult):
