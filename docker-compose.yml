@@ -1,28 +1,20 @@
-version: '3.8'
-
 services:
   api:
-    image: node:20
-    working_dir: /app
-    volumes:
-      - ./api:/app
-    command: ["npm", "start"]
+    build:
+      context: ./api
     ports:
-      - "3000:3000"
+      - "8000:8000"
 
   frontend:
-    image: node:20
-    working_dir: /app
-    volumes:
-      - ./frontend:/app
-    command: ["npm", "start"]
+    build:
+      context: ./frontend
     ports:
-      - "5173:5173"
+      - "3000:80"
+    depends_on:
+      - api
 
   worker:
-    image: node:20
-    working_dir: /app
-    volumes:
-      - ./worker:/app
-    command: ["npm", "start"]
-
+    build:
+      context: ./worker
+    depends_on:
+      - api

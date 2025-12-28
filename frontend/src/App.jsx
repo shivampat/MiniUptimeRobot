@@ -7,8 +7,7 @@ const INTERVAL_OPTIONS = [
   { label: 'Every hour', value: 3600 },
 ];
 
-const API_BASE = 'http://localhost:8000';
-
+const API_BASE = '/api';
 const REFRESH_TICK_MS = 5000;
 
 const formatLastChecked = (value) => {

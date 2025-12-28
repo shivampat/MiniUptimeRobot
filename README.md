@@ -5,6 +5,16 @@ Simple uptime-watcher prototype with:
 - React/Vite frontend to add and view watches (`frontend/`)
 - Worker placeholder (`worker/`) for future periodic checks
 
+## Quick Start with Docker Compose
+
+The easiest way to run the entire stack:
+
+```bash
+docker compose up --build
+```
+
+This will start all services (API, frontend, and worker). The API will be available at `http://localhost:8000` and the frontend at `http://localhost:3000`.
+
 ## Run the API
 ```bash
 cd api
